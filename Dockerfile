@@ -4,7 +4,7 @@ FROM   ubuntu:12.04
 RUN	echo "deb http://archive.ubuntu.com/ubuntu precise universe" >> /etc/apt/sources.list
 
 # workaround for Ubuntu dependency on upstart https://github.com/dotcloud/docker/issues/1024
-RUN	dpkg-divert --local --rename --add /sbin/initctl; ln -s /bin/true /sbin/initctl
+#RUN	dpkg-divert --local --rename --add /sbin/initctl; ln -s /bin/true /sbin/initctl
 
 RUN	apt-get update; apt-get upgrade -y
 
